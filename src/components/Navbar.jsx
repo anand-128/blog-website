@@ -26,7 +26,7 @@ const Navbar = () => {
               </div>
 
               <h1 className="text-white text-2xl font-bold tracking-wide">
-                Blogger
+                Blog-web
               </h1>
             </Link>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
             </nav>
 
             {/* Right Buttons */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-6">
               <Link
                 to="/login"
                 className="text-white text-sm font-medium hover:text-violet-400 transition"
