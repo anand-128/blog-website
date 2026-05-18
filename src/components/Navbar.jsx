@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// const navLinks = [
-//   { name: "Home", link: "/" },
-//   { name: "Blogs", link: "/blogs" },
-//   { name: "Categories", link: "/categories" },
-//   { name: "About", link: "/about" },
-//   { name: "Contact", link: "/contact" },
-// ];
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,17 +31,7 @@ const Navbar = () => {
               <Link to="/categories">Categories</Link>
               <Link to="/about">About</Link>
               <Link to="/contact">Contact</Link>
-              {/* {navLinks.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.link}
-                  className="text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative group"
-                >
-                  {item.name}
-
-                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-violet-500 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))} */}
+              
             </nav>
 
             {/* Right Buttons */}
@@ -80,16 +64,12 @@ const Navbar = () => {
             }`}
           >
             <div className="flex flex-col gap-5">
-              {/* {navLinks.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.link}
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-300 hover:text-white transition text-base font-medium"
-                >
-                  {item.name}
-                </Link>
-              ))} */}
+              <Link to="/">Home</Link>
+              <Link to="/blogs">Blogs</Link>
+              <Link to="/categories">Categories</Link>
+              <Link to="/about">About</Link>
+              <Link to="/contact">Contact</Link>
+              
 
               <div className="flex flex-col gap-3 pt-4">
                 <Link
