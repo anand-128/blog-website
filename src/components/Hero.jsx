@@ -1,7 +1,9 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  let redirect = useNavigate()
   return (
     <>
       <section className="relative min-h-screen bg-[#0F172A] overflow-hidden flex items-center">
@@ -39,12 +41,12 @@ const Hero = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-5 mt-10">
-              <button className="px-7 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 transition-all duration-300 shadow-xl shadow-violet-500/20">
+              <button onClick={()=>{redirect("/login")}} className="px-7 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 transition-all duration-300 shadow-xl shadow-violet-500/20">
                 Get Started
                 <ArrowRight size={20} />
               </button>
 
-              <button className="px-7 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-semibold hover:bg-white/10 transition-all duration-300">
+              <button onClick={()=>{redirect("/blogs")}} className="px-7 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-semibold hover:bg-white/10 transition-all duration-300">
                 Explore Blogs
               </button>
             </div>
